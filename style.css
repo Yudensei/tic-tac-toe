@@ -1,7 +1,14 @@
 body {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+#main {
     background-color: #788694;
     padding: 0;
-    margin: 0;
     height: 100vh;
 
     display: grid;
@@ -10,9 +17,32 @@ body {
     align-content: center;
 }
 
+#play {
+    z-index: 1;
+
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 150px);
+
+    background-color: cornflowerblue;
+    border: 0;
+    border-radius: 10px;
+
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
 #game {
     display: grid;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     box-sizing: border-box;
 }
 
@@ -27,6 +57,11 @@ body {
 #game > * {
     box-sizing: border-box;
     display: grid;
+    cursor: pointer;
+}
+
+#game > *:hover:not(#play) {
+    background-color: rgb(250, 214, 95, 0.2);
 }
 
 .X,
@@ -41,5 +76,22 @@ body {
 
 #player1-info,
 #player2-info {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    outline: none;
+    padding: 4px;
+    background-color: #608694;
+    border: 2px solid cornflowerblue;
+    border-radius: 10px;
+
+    z-index: 1;
+}
+
+#main > [id^="player"] {
+    font-weight: bold;
 }
