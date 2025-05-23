@@ -1,0 +1,45 @@
+body {
+    background-color: #788694;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 75vh;
+    align-content: center;
+}
+
+#game {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    box-sizing: border-box;
+}
+
+#game > div:not([data-y="2"]) {
+    border-bottom: 6px solid #b85f1c;
+}
+
+#game > div:not([data-x="2"]) {
+    border-right: 6px solid #b85f1c;
+}
+
+#game > * {
+    box-sizing: border-box;
+    display: grid;
+}
+
+.X,
+.O {
+    align-self: center;
+    justify-self: center;
+}
+
+.X {
+    transform: rotate(45deg);
+}
+
+#player1-info,
+#player2-info {
+    display: grid;
+}
