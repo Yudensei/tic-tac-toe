@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: #788694;
 }
 
 p {
@@ -13,7 +14,7 @@ p {
 
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 75vh;
+    grid-template-rows: min(75vh, 500px);
     align-content: center;
 }
 
@@ -42,7 +43,7 @@ p {
 #game {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
     box-sizing: border-box;
 }
 
@@ -55,6 +56,7 @@ p {
 }
 
 #game > * {
+    aspect-ratio: 1;
     box-sizing: border-box;
     display: grid;
     cursor: pointer;
